@@ -1,12 +1,7 @@
 package com.exam;
 
-import com.exam.helper.UserFoundException;
-import com.exam.model.Role;
-import com.exam.model.User;
-import com.exam.model.UserRole;
-import com.exam.model.exam.Quiz;
-import com.exam.repo.QuizRepository;
-import com.exam.service.UserService;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,6 +12,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
+
+import com.exam.helper.UserFoundException;
+import com.exam.model.Role;
+import com.exam.model.User;
+import com.exam.model.UserRole;
+import com.exam.repo.QuizRepository;
+import com.exam.service.UserService;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -56,7 +58,7 @@ public class ExamserverApplication implements CommandLineRunner {
 //
             User user = new User();
 
-            user.setFirstName("Durgesh");
+            user.setFirstName("Arun");
             user.setLastName("Tiwari");
             user.setUsername("durgesh8896");
             user.setPassword(this.bCryptPasswordEncoder.encode("abc"));
